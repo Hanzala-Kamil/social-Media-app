@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social media app</title>
+    <link rel="stylesheet" href="../Css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class=".logo">
+                Social Media
+            </h2>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="search here">
+            </div>
+            <div class="create">
+                <label class="btn btn-primary " for="create-post">create</label>
+                <div class="profile-picture">
+                    <img src="../images/Hanzala.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <--------MAIN--------> 
+    
+    <main>
+        <div class="container">
+            <!-- =====left===== -->
+            <div class="left">
+                <a class="profile">
+                    <div class="profile-picture">
+                        <img src="../images/Hanzala.png" alt="">
+                    </div>
+                    <div class="handle">
+                        <h4>Hanzala kamil</h4>
+                        <p class="text-muted">
+                            @day
+                        </p>
+                    </div>
+                </a>
+                <!-- -----------side-bar------------- -->
+                <div class="sidebar">
+                    <a class="menu-item active">
+                        <span style="display: flex;"><i class="fa-solid fa-house-chimney"></i><h3>Home</h3></span>
+                    </a>
+                    <a class="menu-item">
+                        <span style="display: flex;"><i class="fa-regular fa-compass"></i><h3>Explore</h3></span>
+                    </a>
+                    <a class="menu-item" id="notifications">
+                        <span style="display: flex;"><i class="fa-solid fa-bell"><small class="notification-count">7</small></i><h3>Notification</h3></span>
+                        <!-- --------notification-popup---------- -->
+                        <div class="notification-popup">
+                            <div>
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>haznala kamil</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                           
+                            </div>
+                            <div>
+
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Umer Akmal</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                            <div> 
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Riyan Qadir</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                            <div> 
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Riyan Qadir</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                            <div> 
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Riyan Qadir</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                            <div> 
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Riyan Qadir</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                            <div> 
+                                <div class="profile-picture">
+                                    <img src="../images/Hanzala.png" alt="">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Riyan Qadir</b> accept you friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                                
+                           
+
+                            
+                        </div>
+                    </a>
+                    <a class="menu-item" id="messages-notifications">
+                        <span style="display: flex;"><i class="fa-solid fa-message" ><small class="notification-count">6</small></i><h3>Messages</h3></span>
+                    </a>
+                    <a class="menu-item">
+                        <span style="display: flex;"><i class="fa-solid fa-bookmark"></i><h3>Bookmarks</h3></span>
+                    </a>
+                    <a class="menu-item">
+                        <span style="display: flex;"><i class="fa-solid fa-chart-line"></i><h3>Analatics</h3></span>
+                    </a>
+                    <a class="menu-item">
+                        <span style="display: flex;"><i class="fa-solid fa-masks-theater"></i><h3>Theme</h3></span>
+                    </a> 
+                    <a class="menu-item active">
+                        <span style="display: flex;"><i class="fa-solid fa-gear"></i><h3>Setting</h3></span>
+                    </a>
+                </div>
+                <!-- ------------find a sidebar-------------- -->
+                <label for="create-post" class="btn btn-primary">Create Post</label>
+            </div>
+            <!-- ======middle====== -->
+            <div class="middle">
+                <!-- ------stories--------- -->
+                <div class="stories">
+                    <div class="story">
+                        <div class="profile-picture">
+                            <img src="../images/Hanzala.png" alt="">
+                        </div>
+                        <p class="name">Your Story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-picture">
+                            <img src="../images/03.jpeg" alt="">
+                        </div>
+                        <p class="name">Umer</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-picture">
+                            <img src="../images/04.avif" alt="">
+                        </div>
+                        <p class="name">Riyan</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-picture">
+                            <img src="../images/06.jpg" alt="">
+                        </div>
+                        <p class="name">Usama</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-picture">
+                            <img src="../images/07.avif" alt="">
+                        </div>
+                        <p class="name">BBBB</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-picture">
+                            <img src="../images/08.jpg" alt="">
+                        </div>
+                        <p class="name">FUnkuy</p>
+                    </div>
+                </div>
+                <!-- ------end story------ -->
+                <form class="create-post">
+                    <div class="profile-picture">
+                        <img src="../images/Hanzala.png" alt="">
+                    </div>
+                    <input type="text" placeholder="what is in your mind ?" id="create-post">
+                    <input type="submit" value="Post" class="btn btn-primary">
+                </form>
+                <!-- --------------feeds------------- -->
+                <div class="feeds">
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-picture">
+                                    <img src="../images/06.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Riyan Qadir</h3>
+                                    <small>Lahore, 15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <img src="../images/04.avif" alt="">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-buttons">
+                                <span><i class="fa-solid fa-heart like-btn"></i></span>
+                                <span><i class="fa-regular fa-comment"></i></span>
+                                <span><i class="fa-solid fa-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="fa-regular fa-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="../images/04.avif" alt=""></span>
+                            <span><img src="../images/05.jpeg" alt=""></span>
+                            <span><img src="../images/07.avif" alt=""></span>
+                            <p>Liked by <b>Yasir Mehmood</b> and 2,123 others</p>
+                        </div>
+                        <div class="caption">
+                            <p><b>Lorem ipsum</b> dolor, sit amet consectetur adipisicing elit. Cum dolor sequi <span class="harsh-tag">#lifestyle</span></p>
+                        </div>
+                        <div class="search-bar-1">
+                            <input type="search" placeholder="comment here" id="message-send">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            
+                        </div>
+                        <div class="comments text-muted comment-click">
+                            View all 233 comments
+                        </div>
+                        <div class="comment-sec">
+                            <div class="comment-box">
+                                <h5 class="text-muted">Nice</h5>
+                            </div>
+                            <div class="comment-box">
+                                <h5 class="text-muted">aaaaaaaaaaaaa</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        
+            </div>
+            <!-- ======right======= -->
+            <div class="right">
+                <div class="messages">
+                    <div class="heading">
+                        <h4>Messages</h4><i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <!-- -----search bar--------  -->
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" placeholder="search messages" id="message-search">
+                    </div>
+                    <!-- --------------message category---------- -->
+                    <div class="category">
+                         <h6 class="active">Primary</h6>
+                         <h6>General</h6>
+                         <h6 class="message-requests">Requests(7)</h6>
+                    </div>
+                    <!-- --------messages-------- -->
+                    <div class="message">
+                        <div class="profile-picture">
+                            <img src="../images/05.jpeg" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>Aaaaaaaaaaa</h5>
+                            <p class="text-bold">i'm fine brother</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-picture">
+                            <img src="../images/07.avif" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>Bbbbbbbbb</h5>
+                            <p class="text-muted">i'm fine brother</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-picture">
+                            <img src="../images/08.jpg" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>Cccccccccc</h5>
+                            <p class="text-bold">2 new messages</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-picture">
+                            <img src="../images/09.webp" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>Ddddddddd</h5>
+                            <p class="text-bold">i'm fine brother</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="profile-picture">
+                            <img src="../images/10.webp" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>Eeeeeeeee</h5>
+                            <p class="text-bold">i'm fine brother</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ------------end message-------------- -->
+
+                <!-- ------------Friends requests-------------- -->
+                <div class="friend-requests">
+                    <h4>Requests</h4>
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-picture">
+                                <img src="../images/06.jpg" alt="">
+                            </div>
+                            <div>
+                                <h5>Usama Amin</h5>
+                                <p class="text-muted">8 mutual friends</p>
+                                
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">Accept</button>
+                            <button class="btn">Decline</button>
+                        </div>
+                    </div>
+                    <!-- ------------------------------------- -->
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-picture">
+                                <img src="../images/08.jpg" alt="">
+                            </div>
+                            <div>
+                                <h5>Umer Akmal</h5>
+                                <p class="text-muted">8 mutual friends</p>
+                                
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">Accept</button>
+                            <button class="btn">Decline</button>
+                        </div>
+                    </div>
+                    <!-- -------------------------------------- -->
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-picture">
+                                <img src="../images/04.avif" alt="">
+                            </div>
+                            <div>
+                                <h5>Riyan Qadir</h5>
+                                <p class="text-muted">8 mutual friends</p>
+                                
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">Accept</button>
+                            <button class="btn">Decline</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../Js/landing.js"></script>
+</body>
+</html>
