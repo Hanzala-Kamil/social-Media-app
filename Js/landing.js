@@ -178,7 +178,7 @@ messagesNotification.addEventListener("click", () => {
 
 // Fetch Data From API
 
-let url = "https://randomuser.me/api/?results=5";
+let url = "https://randomuser.me/api/?results=40";
 let friendImg = document.querySelector(".feeds");
 
 async function getApis() {

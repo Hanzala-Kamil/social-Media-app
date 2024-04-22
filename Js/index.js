@@ -26,7 +26,7 @@
     //   alert('no account ')
     // }
 if(email == storeData.email && password == storeData.password){
-  location.href = "../Html/landing.html"
+  location.href = "/landing.html"
 }
 else{
   alert("Your Password is not match")
@@ -40,7 +40,7 @@ const signUpButton = document.querySelector(".login button");
 signUpButton.addEventListener("click", function (event) {
   event.preventDefault();
   setTimeout(() => {
-    window.location.href = "../Html/singup.html";
+    window.location.href = "/singup.html";
   }, 10);
   console.log("Sign-up button clicked!");
 });
