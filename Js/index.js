@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".signup");
 
   form.addEventListener("submit", function (event) {
@@ -10,18 +10,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = emailInput.value;
     const password = passwordInput.value;
 
-    const userData = {
-      email: email,
-      password: password,
-    };
+    // const userData = {
+    //   email: email,
+    //   password: password,
+    // };
 
-    localStorage.setItem("userData", JSON.stringify(userData));
-    alert('Data stored in local storage.');
+    // localStorage.setItem("userData", JSON.stringify(userData));
+    // alert('Data stored in local storage.');
 
     // emailInput.value = "";
     // passwordInput.value = "";
 
     let storeData = JSON.parse(localStorage.getItem("userData"));
+    // if (storeData){
+    //   alert('no account ')
+    // }
 if(email == storeData.email && password == storeData.password){
   location.href = "../Html/landing.html"
 }
@@ -29,7 +32,7 @@ else{
   alert("Your Password is not match")
 }
   });
-});
+// });
 
 // sing Up button
 const signUpButton = document.querySelector(".login button");

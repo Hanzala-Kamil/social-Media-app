@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const genderRadios = document.querySelectorAll('input[name="gender"]');
         genderRadios.forEach(radio => {
-            radio.checked = false;
+            radio.checked = false;  
         });
 
         window.location.href = '/index.html';
