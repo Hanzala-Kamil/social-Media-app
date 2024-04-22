@@ -54,7 +54,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #573b8a;
+	background: black;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -65,7 +65,7 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #6d44b8;
+	background: black;
 	color: #fff;
 }
 .login{
