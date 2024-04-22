@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             radio.checked = false;  
         });
 
-        window.location.href = '/index.html';
+        window.location.href = '../index.html';
     });
 
 });
