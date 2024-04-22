@@ -34,6 +34,17 @@ body{
     color: var(--color-dark);
     background: var(--color-light);
 }
+::-webkit-scrollbar{
+    width: 5px;
+    /* background-color: black; */
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #121212;
+}
 /* <----------------Gernal Css---------------> */
 .container{
     width: 80%;
@@ -179,7 +190,7 @@ main .container .left .profile{
 .left .sidebar .menu-item{
     display: flex;
     align-items: center;
-    height: 4rem;
+    height: 3rem;
     cursor: pointer;
     transition: all .3s ease;
     position: relative;
@@ -442,6 +453,7 @@ main .container .right{
     background: white;
     border-radius: var(--card-border-redius);
     padding: var(--card-padding);
+
 }
 .right .messages .heading{
     display: flex;
@@ -531,6 +543,19 @@ main .container .right{
     gap: 1rem;
 }
 
+/* ----------log out btn-----------  */
+.logout-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100000;
+}
+.btn-logout {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: red;
+    color: white;
+}
 
 /* ====MEDIA QUERY OF SMALL LEPTOP AND BIG TABLETA===== */
 
@@ -595,3 +620,4 @@ main .container .right{
         display: none;
     }
 }
+

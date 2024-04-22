@@ -178,7 +178,7 @@ messagesNotification.addEventListener("click", () => {
 
 // Fetch Data From API
 
-let url = "https://randomuser.me/api/?results=40";
+let url = "https://randomuser.me/api/?results=30";
 let friendImg = document.querySelector(".feeds");
 
 async function getApis() {
@@ -278,8 +278,8 @@ function createCommentBox(message) {
     newCommentBox.classList.add("comment-box");
     newCommentBox.innerHTML += `
         <h5 class="text-muted">${message}</h5>
-        <span class="edit-comment">Edit</span>
-        <span class="delete-comment">Delete</span>
+        <span class="edit-comment"><i class="fa-regular fa-pen-to-square"></i></span>
+        <span class="delete-comment"><i class="fa-solid fa-trash"></i></span>
     `;
     return newCommentBox;
 }
@@ -325,3 +325,29 @@ sendIcon.addEventListener("click", () => {
 }
 
 getApis();
+
+
+function logOut(){
+    alert("you want to sure Logout")
+    location.href = "/index.html";
+}
+
+const story = document.querySelectorAll(".story")
+story.forEach(function(story){
+    story.addEventListener("click", ()=> {
+        const img = story.querySelector(".profile-picture img");
+        // img.classList.toggle("largee");
+        img.style.display = "none"
+        img.style.border = "0"
+    })
+})
+
+
+// setTimeout(()=>{
+//     window.addEventListener('scroll', () => {
+//         const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+//         if (scrollPercentage >= 90) {
+//             getApis();
+//         }
+//       });
+// },1000)
