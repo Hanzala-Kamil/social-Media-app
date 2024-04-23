@@ -25,7 +25,7 @@
 //                         <h5>City : ${data.location.city}</h5>
 //                         <h6>Age : ${data.registered.age}</h6>
 //                         <h6>Phone : ${data.phone}</h6>
-//                         <h6>Gender : ${data.gender}</h6> 
+//                         <h6>Gender : ${data.gender}</h6>
 //                     </div>
 //         `
 //     })
@@ -48,10 +48,7 @@
 //     }
 // }
 
-// slider(); 
-
-
-
+// slider();
 
 // let btn = document.getElementById("nextBtn");
 // btn.addEventListener("click", function() {
@@ -64,7 +61,7 @@
 //     if(startIndex == img.length - numImagesToShow){
 //         startIndex =0
 //     }
-    
+
 // });
 
 // document.addEventListener('DOMContentLoaded', function() {
@@ -116,8 +113,6 @@
 //         }
 //     };
 // });
-
-
 
 // SIDEBAR
 const menuItems = document.querySelectorAll(".menu-item");
@@ -222,7 +217,7 @@ async function getApis() {
             <span><img src="../images/05.jpeg" alt=""></span>
             <span><img src="../images/07.avif" alt=""></span>
             <p>Liked by <b>${data.name.first}</b> and ${data.location.street.number
-            }</p>
+            } others</p>
         </div>
         <div class="caption">
             <p><b>Lorem ipsum</b> dolor, sit amet consectetur adipisicing elit. Cum dolor 
@@ -248,100 +243,123 @@ async function getApis() {
 </div>
 `;
 
-// LIKE BTN
-const likeBtn = document.querySelectorAll(".like-btn");
-likeBtn.forEach((ele) => {
-    ele.addEventListener("click", () => {
-        ele.classList.toggle("bg-red");
-    });
-});
- 
-
-// Comment Click
-const commentClicks = document.querySelectorAll(".comment-click");
-
-commentClicks.forEach(commentClick => {
-    commentClick.addEventListener("click", () => {
-        const commentSec = commentClick.nextElementSibling;
-        commentSec.classList.toggle("d-b");
-    });
-});
-
-
-const messageSend = document.getElementById("message-send");
-const sendIcon = document.querySelector(".fa-paper-plane");
-const commentSec = document.querySelector(".comment-sec");
-
-// Function to create a new comment box
-function createCommentBox(message) {
-    const newCommentBox = document.createElement("div");
-    newCommentBox.classList.add("comment-box");
-    newCommentBox.innerHTML += `
-        <h5 class="text-muted">${message}</h5>
-        <span class="edit-comment"><i class="fa-regular fa-pen-to-square"></i></span>
-        <span class="delete-comment"><i class="fa-solid fa-trash"></i></span>
-    `;
-    return newCommentBox;
-}
-
-// Function to handle the edit action
-function handleEdit(commentBox) {
-    const message = commentBox.querySelector("h5").textContent;
-    const editedMessage = prompt("Edit your comment:", message);
-    if (editedMessage !== null) {
-        commentBox.querySelector("h5").textContent = editedMessage;
-    }
-}
-
-// Function to handle the delete action
-function handleDelete(commentBox) {
-    commentBox.remove();
-}
-
-// Event listener for send icon click
-sendIcon.addEventListener("click", () => {
-    const message = messageSend.value.trim();
-    if (message !== "") {
-        const newCommentBox = createCommentBox(message);
-        commentSec.appendChild(newCommentBox);
-        messageSend.value = ""; 
-
-        // Event listeners for edit and delete actions
-        const editButton = newCommentBox.querySelector(".edit-comment");
-        const deleteButton = newCommentBox.querySelector(".delete-comment");
-
-        editButton.addEventListener("click", () => {
-            handleEdit(newCommentBox);
+        // LIKE BTN
+        const likeBtn = document.querySelectorAll(".like-btn");
+        likeBtn.forEach((ele) => {
+            ele.addEventListener("click", () => {
+                ele.classList.toggle("bg-red");
+            });
         });
 
-        deleteButton.addEventListener("click", () => {
-            handleDelete(newCommentBox);
+        // Comment Click
+        const commentClicks = document.querySelectorAll(".comment-click");
+
+        commentClicks.forEach((commentClick) => {
+            commentClick.addEventListener("click", () => {
+                const commentSec = commentClick.nextElementSibling;
+                commentSec.classList.toggle("d-b");
+            });
         });
-    }
-});
 
-});
+        const sendIcon = document.querySelectorAll(".fa-paper-plane");
+        const commentSec = document.querySelectorAll(".comment-sec");
+        const messageSend = document.querySelectorAll("#message-send");
 
+
+        // console.log(sendIcon);
+        sendIcon.forEach((icon, i) => {
+            icon.addEventListener("click", () => {
+                const message = messageSend[i].value;
+                // console.log(message);
+
+                commentSec[i].append(createCommentBox(message));
+                messageSend[i].value = "";
+            });
+        });
+
+        // Function to create a new comment box
+        function createCommentBox(message) {
+            const newCommentBox = document.createElement("div");
+            newCommentBox.classList.add("comment-box");
+            let editBtn = document.createElement('span');
+            editBtn.classList.add('edit-comment');
+            editBtn.innerHTML = `<i class="fa-regular fa-pen-to-square" onClick = handleEdit()></i>`;
+            let delBtn = document.createElement('span');
+
+            delBtn.classList.add('delete-comment');
+            delBtn.innerHTML = `<i class="fa-solid fa-trash" onClick = handleDelete(event)></i>`;
+            newCommentBox.innerHTML += `
+                <h5 class="text-muted">${message}</h5>
+                
+                ${editBtn.innerHTML}
+                ${delBtn.innerHTML}
+            `;
+
+            // const editButton = document.querySelector(".edit-comment");
+            // const deleteButton = document.querySelector(".delete-comment");
+            // console.log(editBtn);
+            // editBtn.addEventListener('click', ()=> {
+            //     console.log(123);
+            // });
+            // deleteButton.addEventListener("click", handleDelete);
+
+
+
+            //         // Function to handle the delete action
+
+
+            return newCommentBox;
+        }
+
+        // Function to handle the edit action
+
+
+        // Event listener for send icon click
+        // sendIcon.addEventListener("click", () => {
+        //     const message = messageSend.value.trim();
+        //     if (message !== "") {
+        //         const newCommentBox = createCommentBox(message);
+        //         commentSec.appendChild(newCommentBox);
+        //         messageSend.value = "";
+
+        //         // Event listeners for edit and delete actions
+
+        //     }
+        // });
+    });
 }
 
 getApis();
 
 
-function logOut(){
-    alert("you want to sure Logout")
+function handleEdit() {
+    const message = document.querySelector(".comment-box h5").textContent;
+    // console.log(12);
+
+    const editedMessage = prompt("Edit your comment:", message);
+    if (editedMessage !== null) {
+        document.querySelector(".comment-box h5").textContent = editedMessage;
+    }
+}
+function handleDelete(event) {
+    event.target.parentElement.remove();
+}
+
+
+function logOut() {
+    alert("you want to sure Logout");
     location.href = "./index.html";
 }
 
-const story = document.querySelectorAll(".story")
-story.forEach(function(story){
-    story.addEventListener("click", ()=> {
+const story = document.querySelectorAll(".story");
+story.forEach(function (story) {
+    story.addEventListener("click", () => {
         const img = story.querySelector(".profile-picture img");
         // img.classList.toggle("largee");
-        img.style.display = "none"
-        img.style.border = "0"
-    })
-})
-
+        img.style.display = "none";
+        img.style.border = "0";
+    });
+});
 
 // setTimeout(()=>{
 //     window.addEventListener('scroll', () => {
@@ -351,3 +369,5 @@ story.forEach(function(story){
 //         }
 //       });
 // },1000)
+
+
