@@ -329,7 +329,7 @@ getApis();
 
 function logOut(){
     alert("you want to sure Logout")
-    location.href = "/index.html";
+    location.href = "./index.html";
 }
 
 const story = document.querySelectorAll(".story")
